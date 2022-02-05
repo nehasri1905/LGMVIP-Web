@@ -22,15 +22,15 @@
                     <i class="fa fa-window-close-o" onclick="UI.clearToDo()"></i>
                 </div>
             </div>
+            <div class="addToDo">
+                <i class="fa fa-plus-square-o"></i>
+                <input type="text" id="input" placeholder="New">
+            </div>
             <ul id="list">
             </ul>
         </div>
-        <div class="addToDo">
-            <i class="fa fa-plus-square-o"></i>
-            <input type="text" id="input" placeholder="New">
-        </div>
+        
     </div>
-    <!------Javascript code----->
     <script>
         const date = document.getElementById('date');
         const options = {month: "long", day: "numeric", weekday: "long", }
@@ -52,7 +52,7 @@ class UI{
         <i class="far ${statusIcon} co" action="complete" id="${id}"></i>
         <i class="fa fa-minus-square-o" action="delete" id="${id}"></i>
         </li>`;
-        const position = "beforeend";
+        const position = "afterbegin";
         list.insertAdjacentHTML(position, liItem);
     }
     static removeToDo(element){
